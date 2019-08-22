@@ -2,6 +2,7 @@
 
 ## Keywords
 
+<br>参考文献：[保留字详解](https://zhuanlan.zhihu.com/p/31967407)
 > |       |        |          |       |        |          |
 > | :---: | :----: | :------: | :---: | :----: | :------: |
 > | False |  None  |   True   |  and  |   as   |  assert  |
@@ -14,7 +15,7 @@
 1. False
 
 ```python
-if q==False:#False
+if q==False:	 #False
 ```
 
 2. None
@@ -31,7 +32,7 @@ if q==False:#False
 3. True
 
 ```python
-if q==True:#True
+if q==True:		#True
 ```
 
 4. and
@@ -76,11 +77,11 @@ print "Good bye!"
    <br>用来创建类
 ```python
 class Dog:
-    def __init__(self,name):#类创建的时候便执行，常用来初始化类
+    def __init__(self,name):    #类创建的时候便执行，常用来初始化类
     	self.name=name
-    	self.__voice="wangwang"#__voice表示voice属性为私有属性
+    	self.__voice="wangwang"    #__voice表示voice属性为私有属性
 	def yell(self):#功能函数
-		print self.__voice#yell函数用来打印私有变量__voice
+		print self.__voice    #yell函数用来打印私有变量__voice
 ```
 
 9. continue
@@ -91,10 +92,10 @@ class Dog:
 10. def & return
     <br>创建函数
 ```python
-def functionname( parameters ):#parameters是自定义参数
+def functionname( parameters ):		#parameters是自定义参数
    "函数_文档字符串"
    function_suite
-   return [expression]#expression是返回值，当调用functionname函数时，就会返回expression值
+   return [expression]		#expression是返回值，当调用functionname函数时，就会返回expression值
 ```
 * **return**语句用于**退出函数**，向调用方返回一个表达式。
 * **return在不带参数的情况下（或者没有写return语句），默认返回None。**
@@ -110,7 +111,7 @@ del a     #删除变量a，解除a对1的引用
 del b     #删除变量b，解除b对1的引用  
 print(c)  #最终变量c仍然引用1  
 ```
-	关于list
+   关于list
 ```
 li=[1,2,3,4,5]  #列表本身不包含数据1,2,3,4,5，而是包含变量：li[0] li[1] li[2] li[3] li[4]   
 first=li[0]     #拷贝列表，也不会有数据对象的复制，而是创建新的变量引用  
@@ -138,24 +139,24 @@ else:
 try:
     clause
 except:
-    clause#出现异常时执行
+    clause	#出现异常时执行
 else:
-    clause#不出现异常时执行
+    clause	#不出现异常时执行
 finally:
-    clause#不管有无异常都要执行
+    clause	#不管有无异常都要执行
 ```
 具体到错误
 ```python
 try:
     clause
 except ValueError:
-    clause#出现异常时执行
+    clause	#出现异常时执行
 except ZeroDivisionError:
-    clause#出现异常时执行
+    clause	#出现异常时执行
 else:
-    clause#不出现异常时执行
+    clause	#不出现异常时执行
 finally:
-    clause#不管有无异常都要执行
+    clause	#不管有无异常都要执行
 ```
 
 14. for & in
@@ -165,8 +166,8 @@ for i in range(100):
 
 15. from & import
 ```python
-from datetime import datetime#是只引入datetime包里的datetime类
-import datetime#引入整个datetime包
+from datetime import datetime		#是只引入datetime包里的datetime类
+import datetime		#引入整个datetime包
 ```
 
 16. global
@@ -183,8 +184,111 @@ import datetime#引入整个datetime包
 1
 ```
 
-17. 
+17. is
+<br>is 主要是判断 2 个变量是否引用的是同一个对象，如果是的话，则返回 `True`，否则返回`false`。**即两个对象的id要相同，引用同一块区域。**
+<br>
+<br>**注意**⚠️：判断数字相等不要用 is 操作符
+```
+>>> a = 256
+>>> b = 256
+>>> id(a)
+9987148
+>>> id(b)
+9987148
+>>> a = 257
+>>> b = 257
+>>> id(a)
+11662816
+>>> id(b)
+11662828
+```
+**is 相等代表两个对象的 id 相同(从底层来看的话，可以看作引用同一块内存区域)。**<br>所以即使数值相同，a与b依旧不同。
 
+18. lambda
+<br>lambda作为一个表达式，定义了一个匿名函数，上例的代码x为入口参数，x+1为函数体
+```
+>>> g=lambda x:x+1
+>>> g(1)
+2
+>>> g(2)
+3
+```
+
+19. nonlocal
+非局部变量<br>
+*Ps:这是python3新增的关键词*
+**参考文献**：[【Python】【nonlocal】【global 】nonlocal非局部变量、global 全局变量、局部变量](https://zhuanlan.zhihu.com/p/32050475)
+
+20. not
+```python
+if not( q and p ):
+   print "变量 q 和 p 都为 false，或其中一个变量为 false"
+```
+
+21. or
+```python
+if ( a or b ):
+   print "变量 a 和 b 都为 true，或其中一个变量为 true"
+```
+
+22. pass
+<br>Python pass是空语句，是为了保持程序结构的完整性。
+<br>pass 不做任何事情，一般用做占位语句。
+```python
+for letter in 'Python':
+   if letter == 'h':
+      pass
+      print '这是 pass 块'
+   print '当前字母 :', letter
+
+print "Good bye!"
+```
+**参考文献**：[Python pass 语句 | 菜鸟教程](https://www.runoob.com/python/python-pass-statement.html)
+
+23. raise
+<br>**触发异常**
+<br>
+<br>当程序出现错误，python会自动引发异常，也可以通过raise显示地引发异常。一旦执行了raise语句，raise后面的语句将不能执行。
+```python
+try:
+     s = None
+     if s is None:
+         print "s 是空对象"
+         raise NameError     #如果引发NameError异常，后面的代码将不能执行
+     print len(s)  #这句不会执行，但是后面的except还是会走到
+except TypeError:
+     print "空对象没有长度"
+
+
+
+s = None
+if s is None:
+    raise NameError 
+print 'is here?' #如果不使用try......except这种形式，那么直接抛出异常，不会执行到这里
+```
+**参考文献**：[python中异常处理--raise的使用 - 远游骑士 - 博客园](https://www.cnblogs.com/zhangyin6985/p/7229553.html)
+
+24. while
+<br>Python 编程中 while 语句用于循环执行程序，即在某条件下，循环执行某段程序，以处理需要重复处理的相同任务。其基本形式为：
+```python
+while 判断条件：
+	执行语句……
+```
+执行语句可以是单个语句或语句块。判断条件可以是任何表达式，任何非零、或非空（null）的值均为true。<br>
+当判断条件假false时，循环结束。
+```python
+count = 0
+while (count < 9):
+   print 'The count is:', count
+   count = count + 1
+ 
+print "Good bye!"
+```
+
+25. with & yield
+with语句：[【Python】【with】with语句](https://zhuanlan.zhihu.com/p/32122124)
+yield语句：[【Python】【yield】yield详解](https://zhuanlan.zhihu.com/p/32178981)
+*Ps:一点高级可能暂时用不上吧饿emm*
 
 
 
