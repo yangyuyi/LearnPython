@@ -186,7 +186,7 @@ import datetime		#引入整个datetime包
 ```
 
 16. global
-    <br>申请全局变量<br><br>
+    <br>**申请全局变量**<br><br>
     在编写程序的时候，如果想为一个在函数外的变量重新赋值，并且这个变量会作用于许多函数中时，就需要告诉python这个变量的作用域是全局变量。此时用global语句就可以变成这个任务，也就是说没有用global语句的情况下，是不能修改全局变量的。
 
 ```
@@ -236,10 +236,8 @@ import datetime		#引入整个datetime包
 ```
 
 19. nonlocal
-
     <br>
-
-    非局部变量<br>
+    **非局部变量**<br>
     *Ps:这是python3新增的关键词*<br>
     **参考文献**：[【Python】【nonlocal】【global 】nonlocal非局部变量、global 全局变量、局部变量](https://zhuanlan.zhihu.com/p/32050475)
 
@@ -321,4 +319,4 @@ print "Good bye!"
     <br>
     with语句：[【Python】【with】with语句](https://zhuanlan.zhihu.com/p/32122124)<br>
     yield语句：[【Python】【yield】yield详解](https://zhuanlan.zhihu.com/p/32178981)<br>
-    *Ps:一点高级可能暂时用不上吧饿emm*
+    *Ps:一点高级可能暂时用不上吧emm*
