@@ -375,4 +375,4 @@ for <variable> in range(<parameters>):
 - range(N)
   func:产生0到N-1的整数序列，共N个
 - range(M,N)
-  func:产生M到N-1的
+  func:产生M到N-1的整数序列，共N-M个
