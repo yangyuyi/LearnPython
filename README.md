@@ -320,3 +320,65 @@ print "Good bye!"
     with语句：[【Python】【with】with语句](https://zhuanlan.zhihu.com/p/32122124)<br>
     yield语句：[【Python】【yield】yield详解](https://zhuanlan.zhihu.com/p/32178981)<br>
     *Ps:一点高级可能暂时用不上吧emm*
+
+##turtle库
+###画笔控制函数
+**画笔操作后一直有效，一般成对出现**<br>
+- turtle.penup() or turtle.pu()<br>
+func:拾起画笔
+- turtle。pendown() or turtle.pd()<br>
+func:落下画笔
+- turle.pensize(width) or turtle.width(width)<br>
+func:设置画笔宽度
+- turtle.pencolor(color) color为颜色字符串或RGB值<br>
+func:设置画笔颜色<br>
+Ps:color的参数有3种形式:
+-- 颜色字符串：turtke.pencolor("purple")
+-- RGB的小数值：turtle.pencolor(0.63,0.13,0.94)
+-- RGB的元组值：turtle.pencolor((0.63,0.13,0.94))
+
+###运动控制函数
+**控制海龟行进：走直线 & 走曲线**
+- turtle.forward(d) or turtle.fd(d)<br>
+func:向前行进 -d:行进距离，可以为负数,单位：像素（pixel）
+- turtle.circle(r,extent=None)<br>
+func:根据半径r绘制extent角度的弧形 -r:默认圆心在海关左侧距离r距离的位置 -extent:绘制角度，默认是360度整圆
+
+###方向控制函数
+**控制海龟面对方向绝对角度 & 海龟角度**
+- turtle.setheading(angle) ot turtle.seth(angle)<br>
+func:改变行进方向 -angle:改变的某一个绝对角度
+- turtle.left(angle)<br>
+func:turtle向左转angle度
+- turtle.right(angle)<br>
+func:turtle向右转angle度
+
+##循环语句
+**按照一定次数循环执行一组语句**
+```python
+for <variable> in range(<parameters>):
+  <executed statement>
+```
+
+##range() 函数
+**产生循环计数序列**
+- range(N)
+func:产生0到N-1的整数序列，共N个
+- range(M,N)
+func:产生M到N-1的
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
