@@ -16,7 +16,7 @@
 1. False
 
 ```python
-if q==False:	 #False
+if q==False:   #False
 ```
 
 2. None
@@ -34,7 +34,7 @@ if q==False:	 #False
 3. True
 
 ```python
-if q==True:		#True
+if q==True:   #True
 ```
 
 4. and
@@ -42,7 +42,7 @@ if q==True:		#True
 
 ```python
 if (q and p):
-	print("1 - 变量 q 和 p 都为 true")
+  print("1 - 变量 q 和 p 都为 true")
 ```
 
 5. as
@@ -81,10 +81,10 @@ print "Good bye!"
 ```python
 class Dog:
     def __init__(self,name):    #类创建的时候便执行，常用来初始化类
-    	self.name=name
-    	self.__voice="wangwang"    #__voice表示voice属性为私有属性
-	def yell(self):#功能函数
-		print self.__voice    #yell函数用来打印私有变量__voice
+      self.name=name
+      self.__voice="wangwang"    #__voice表示voice属性为私有属性
+  def yell(self):#功能函数
+    print self.__voice    #yell函数用来打印私有变量__voice
 ```
 
 9. continue
@@ -96,10 +96,10 @@ class Dog:
     <br>创建函数
 
 ```python
-def functionname( parameters ):		#parameters是自定义参数
+def functionname( parameters ):   #parameters是自定义参数
    "函数_文档字符串"
    function_suite
-   return [expression]		#expression是返回值，当调用functionname函数时，就会返回expression值
+   return [expression]    #expression是返回值，当调用functionname函数时，就会返回expression值
 ```
 
 - **return**语句用于**退出函数**，向调用方返回一个表达式。
@@ -150,11 +150,11 @@ else:
 try:
     clause
 except:
-    clause	#出现异常时执行
+    clause  #出现异常时执行
 else:
-    clause	#不出现异常时执行
+    clause  #不出现异常时执行
 finally:
-    clause	#不管有无异常都要执行
+    clause  #不管有无异常都要执行
 ```
 
 具体到错误
@@ -163,13 +163,13 @@ finally:
 try:
     clause
 except ValueError:
-    clause	#出现异常时执行
+    clause  #出现异常时执行
 except ZeroDivisionError:
-    clause	#出现异常时执行
+    clause  #出现异常时执行
 else:
-    clause	#不出现异常时执行
+    clause  #不出现异常时执行
 finally:
-    clause	#不管有无异常都要执行
+    clause  #不管有无异常都要执行
 ```
 
 14. for & in
@@ -181,8 +181,8 @@ for i in range(100):
 15. from & import
 
 ```python
-from datetime import datetime		#是只引入datetime包里的datetime类
-import datetime		#引入整个datetime包
+from datetime import datetime   #是只引入datetime包里的datetime类
+import datetime   #引入整个datetime包
 ```
 
 16. global
@@ -240,7 +240,6 @@ import datetime		#引入整个datetime包
     **非局部变量**<br>
     *Ps:这是python3新增的关键词*<br>
     **参考文献**：[【Python】【nonlocal】【global 】nonlocal非局部变量、global 全局变量、局部变量](https://zhuanlan.zhihu.com/p/32050475)
-
 20. not
 
 ```python
@@ -300,7 +299,7 @@ print 'is here?' #如果不使用try......except这种形式，那么直接抛�
 
 ```python
 while 判断条件：
-	执行语句……
+  执行语句……
 ```
 
 执行语句可以是单个语句或语句块。判断条件可以是任何表达式，任何非零、或非空（null）的值均为true<br>
@@ -321,64 +320,59 @@ print "Good bye!"
     yield语句：[【Python】【yield】yield详解](https://zhuanlan.zhihu.com/p/32178981)<br>
     *Ps:一点高级可能暂时用不上吧emm*
 
-##turtle库
-###画笔控制函数
+## turtle库
+
+### 画笔控制函数
+
 **画笔操作后一直有效，一般成对出现**<br>
+
 - turtle.penup() or turtle.pu()<br>
-func:拾起画笔
+  func:拾起画笔
 - turtle。pendown() or turtle.pd()<br>
-func:落下画笔
+  func:落下画笔
 - turle.pensize(width) or turtle.width(width)<br>
-func:设置画笔宽度
+  func:设置画笔宽度
 - turtle.pencolor(color) color为颜色字符串或RGB值<br>
-func:设置画笔颜色<br>
-Ps:color的参数有3种形式:
--- 颜色字符串：turtke.pencolor("purple")
--- RGB的小数值：turtle.pencolor(0.63,0.13,0.94)
--- RGB的元组值：turtle.pencolor((0.63,0.13,0.94))
+  func:设置画笔颜色<br>
+  Ps:color的参数有3种形式:
+  - 颜色字符串：turtke.pencolor("purple")
+  - RGB的小数值：turtle.pencolor(0.63,0.13,0.94)
+  - RGB的元组值：turtle.pencolor((0.63,0.13,0.94))
 
-###运动控制函数
+### 运动控制函数
+
 **控制海龟行进：走直线 & 走曲线**
+
 - turtle.forward(d) or turtle.fd(d)<br>
-func:向前行进 -d:行进距离，可以为负数,单位：像素（pixel）
+  func:向前行进 -d:行进距离，可以为负数,单位：像素（pixel）
 - turtle.circle(r,extent=None)<br>
-func:根据半径r绘制extent角度的弧形 -r:默认圆心在海关左侧距离r距离的位置 -extent:绘制角度，默认是360度整圆
+  func:根据半径r绘制extent角度的弧形 -r:默认圆心在海关左侧距离r距离的位置 -extent:绘制角度，默认是360度整圆
 
-###方向控制函数
+### 方向控制函数
+
 **控制海龟面对方向绝对角度 & 海龟角度**
-- turtle.setheading(angle) ot turtle.seth(angle)<br>
-func:改变行进方向 -angle:改变的某一个绝对角度
-- turtle.left(angle)<br>
-func:turtle向左转angle度
-- turtle.right(angle)<br>
-func:turtle向右转angle度
 
-##循环语句
+- turtle.setheading(angle) ot turtle.seth(angle)<br>
+  func:改变行进方向 -angle:改变的某一个绝对角度
+- turtle.left(angle)<br>
+  func:turtle向左转angle度
+- turtle.right(angle)<br>
+  func:turtle向右转angle度
+
+## 循环语句
+
 **按照一定次数循环执行一组语句**
+
 ```python
 for <variable> in range(<parameters>):
   <executed statement>
 ```
 
-##range() 函数
+## range() 函数
+
 **产生循环计数序列**
+
 - range(N)
-func:产生0到N-1的整数序列，共N个
+  func:产生0到N-1的整数序列，共N个
 - range(M,N)
-func:产生M到N-1的
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  func:产生M到N-1的
