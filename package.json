@@ -1,0 +1,22 @@
+{
+  "name": "learnpython",
+  "version": "1.0.0",
+  "description": "record the way i learn python",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yangyuyi/LearnPython.git"
+  },
+  "keywords": [
+    "Study"
+  ],
+  "author": "yangyuyi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yangyuyi/LearnPython/issues"
+  },
+  "homepage": "https://github.com/yangyuyi/LearnPython#readme"
+}
